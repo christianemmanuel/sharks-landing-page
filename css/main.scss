@@ -59,7 +59,7 @@ header {
     height: 100vh;
     background-color: $black-color;
     color: $white-color;
-    background-image: url('/assets/header.jpg');
+    background-image: url('../assets/header.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -173,7 +173,7 @@ header {
   padding-top: 12.5rem;
   padding-bottom: 10rem;
   text-align: center;
-  background-image: url('/assets/splash-bg.jpg');
+  background-image: url('../assets/splash-bg.jpg');
   background-position: bottom center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -431,7 +431,7 @@ header {
     height: 29px;
     font-size: 0;
     border-radius: 50%;
-    background-image: url('/assets/icon-circle-arrow.svg');
+    background-image: url('../assets/icon-circle-arrow.svg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -472,7 +472,7 @@ footer {
   width: 38px;
   height: 38px;
   cursor: pointer;
-  background-image: url('/assets/icon-scroll-top.svg');
+  background-image: url('../assets/icon-scroll-top.svg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
