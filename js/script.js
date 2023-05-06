@@ -8,7 +8,7 @@ $(document).ready(function () {
     arrows: false,
     slidesToShow: 3,
     draggable: false,
-    autoplay: false,
+    autoplay: true,
     speed: 300,
     responsive: [
       {
