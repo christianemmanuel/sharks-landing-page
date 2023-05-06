@@ -1,0 +1,51 @@
+@media (max-width: 768px) {
+  .slick-slide {
+    padding: 0 10px; }
+    .slick-slide .events-card-hide {
+      opacity: 1;
+      visibility: visible; }
+      .slick-slide .events-card-hide .event-title {
+        opacity: 1; } }
+
+@media (max-width: 576px) {
+  .events-slider-details {
+    background-color: red; }
+    .events-slider-details .events-card-hide .event-title {
+      padding: 0 .75rem; }
+      .events-slider-details .events-card-hide .event-title .event-desc {
+        padding-right: 0; }
+        .events-slider-details .events-card-hide .event-title .event-desc h4 {
+          white-space: nowrap;
+          display: block;
+          overflow: hidden;
+          text-overflow: ellipsis; }
+      .events-slider-details .events-card-hide .event-title .date {
+        position: absolute;
+        left: 0;
+        top: 0;
+        background-color: rgba(27, 27, 27, 0.7);
+        transform: scale(0.7); } }
+
+@media (max-width: 576px) {
+  header.hero-banner {
+    height: auto;
+    min-height: 450px !important; } }
+
+@media (max-width: 768px) {
+  .section-newsletter .newsletter-form-wrap {
+    padding: 1.75rem 0 2.4rem 0;
+    margin: auto;
+    text-align: center; }
+  .section-newsletter .social-media-icon ul {
+    justify-content: center; }
+  .section-newsletter .newsletter-img {
+    display: none; } }
+
+@media (max-width: 768px) {
+  header .countdown-event ul li div {
+    font-size: 2.375rem; } }
+@media (max-width: 576px) {
+  header .countdown-event ul li div {
+    font-size: 1.8rem; } }
+
+/*# sourceMappingURL=mobile.css.map */

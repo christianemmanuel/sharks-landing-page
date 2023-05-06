@@ -24,8 +24,8 @@ body {
   display: flex;
   flex-direction: column;
   width: 100%;
-  padding-right: 12px;
-  padding-left: 12px;
+  padding-right: 15px;
+  padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
   max-width: 1140px;
@@ -262,6 +262,7 @@ header {
     visibility: hidden;
     background-color: $orange-color;
     .event-title {
+      justify-content: space-between;
       transition-delay: 200ms;
       opacity: 0;
       height: 120px;

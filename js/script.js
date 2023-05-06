@@ -8,7 +8,28 @@ $(document).ready(function () {
     arrows: false,
     slidesToShow: 3,
     draggable: false,
-    autoplay: true,
+    autoplay: false,
+    speed: 300,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          variableWidth: false,
+          autoplay: false,
+          slidesToShow: 1,
+          centerPadding: '60px',
+        }
+      },
+      {
+        breakpoint: 576,
+        settings: {
+          variableWidth: false,
+          autoplay: false,
+          slidesToShow: 1,
+          centerPadding: '30px',
+        }
+      }
+    ]
   });
 
 
@@ -37,6 +58,31 @@ $(document).ready(function () {
       scrollTop: 0
     }, 800);
     return false;
+  });
+
+  // Adjust Height
+  function autoHeight() {
+    $winHeight = window.innerHeight;
+    
+    var autoHeight = document.querySelectorAll('.auto_height');
+
+    if($winHeight > 520){
+      // alert($winHeight)
+      for (i = 0; i < autoHeight.length; i++) {
+        autoHeight[i].style.minHeight = $winHeight - 1 + "px";
+      }
+    }
+    else{
+      for (i = 0; i < autoHeight.length; i++) {
+        autoHeight[i].style.minHeight = "520px"
+      }
+    }
+  }
+  autoHeight();
+
+  // Window Resize
+  $( window ).resize(function() {
+    autoHeight;
   });
 
 });

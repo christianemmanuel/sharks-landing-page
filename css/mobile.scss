@@ -1,0 +1,132 @@
+// Small tablets and large smartphones (landscape view)
+$screen-sm-max: 576px;
+
+// Small tablets (portrait view)
+$screen-md-max: 768px;
+
+// Tablets and small desktops
+$screen-lg-max: 992px;
+
+// Large tablets and desktops
+$screen-xl-max: 1200px;
+
+// Small devices
+@mixin sm {
+  @media (max-width: #{$screen-sm-max}) {
+    @content;
+  }
+}
+
+// Medium devices
+@mixin md {
+  @media (max-width: #{$screen-md-max}) {
+      @content;
+  }
+}
+
+// Large devices
+@mixin lg {
+  @media (max-width: #{$screen-lg-max}) {
+      @content;
+  }
+}
+
+// Extra large devices
+@mixin xl {
+  @media (max-width: #{$screen-xl-max}) {
+      @content;
+  }
+}
+
+.slick-slide {
+  @include md {
+    padding: 0 10px;
+    .events-card-hide {
+      opacity: 1;
+      visibility: visible;
+      .event-title {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.events-slider-details {
+  @include sm {
+    background-color: red;
+    .events-card-hide {
+      .event-title {
+        padding: 0 .75rem;
+        .event-desc {
+          padding-right: 0;
+          h4 {
+            white-space: nowrap;
+            display: block;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
+        }
+        .date {
+          position: absolute;
+          left: 0;
+          top: 0;
+          background-color: rgba(27, 27, 27, .7);
+          transform: scale(.7);
+        }
+      }
+    }
+  }
+}
+
+
+header {
+  @include sm {
+    &.hero-banner {
+      height: auto;
+        min-height: 450px !important;
+    } 
+  }
+}
+
+.section-newsletter {
+  @include md {
+    .newsletter-form-wrap {
+      padding: 1.75rem 0 2.4rem 0;
+      margin: auto;
+      text-align: center;
+    }
+    .social-media-icon {
+      ul {
+        justify-content: center;
+      }
+    }
+    .newsletter-img {
+      display: none;
+    }
+  }
+}
+
+header {
+  @include md {
+    .countdown-event {
+      ul {
+        li {
+          div {
+            font-size: 2.375rem;
+          }
+        }
+      }
+    }
+  }
+  @include sm {
+    .countdown-event {
+      ul {
+        li {
+          div {
+            font-size: 1.8rem;
+          }
+        }
+      }
+    }
+  }
+}
