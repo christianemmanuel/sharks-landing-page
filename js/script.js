@@ -100,18 +100,31 @@ $(document).ready(function () {
   let form = document.querySelector("form");
   form.addEventListener('submit', (e) => {
     e.preventDefault();
+
+    var submitBtn = document.querySelector("#btn-subscribe");
     
-    document.querySelector("#btn-subscribe").value = "Submiting..";
+    submitBtn.value = "Submiting..";
+    submitBtn.setAttribute("disabled", "");
+
     let data = new FormData(form);
-    
     fetch("https://script.google.com/macros/s/AKfycbxGUjF-QspgtIrL_bjyX843FrkVYSGnp_uTDxtHPgIQmE6FtgRe-VrNywYAuG2KX0rz/exec", {
       method: "POST",
-      body: data
+      body: data,
+      crossorigin: true,    
+      mode: 'no-cors'
     })
     .then(res => res.text())
     .then(data => {
-      document.querySelector("#msg").innerHTML = data;
-      document.querySelector("#btn-subscribe").value = "Submit"
+      document.getElementById("email").value = ""
+
+      document.getElementById("msg").innerHTML = `<span class="msg">Thank you for subscribing!!!</span>`
+
+      setTimeout(function () {
+        document.querySelector(".msg").remove();
+      }, 5000)
+
+      submitBtn.removeAttribute('disabled');
+      submitBtn.value = "Submit"
     });
   })
 

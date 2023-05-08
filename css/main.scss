@@ -440,6 +440,9 @@ header {
     background-size: cover;
     background-repeat: no-repeat;
     cursor: pointer;
+    &:disabled {
+      background-image: url('../assets/icon-circle-arrow-disabled.svg');
+    }
   }
 }
 
@@ -481,4 +484,13 @@ footer {
   background-size: cover;
   background-repeat: no-repeat;
   font-size: 0;
+}
+
+span {
+  &.msg {
+    color: $white-color;
+    padding-top: 10px;
+    display: block;
+    padding-left: 5px;
+  }
 }
