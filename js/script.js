@@ -97,4 +97,22 @@ $(document).ready(function () {
     $('.nav-links').slideToggle('fast');
   })
 
+  let form = document.querySelector("form");
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    
+    document.querySelector("#btn-subscribe").value = "Submiting..";
+    let data = new FormData(form);
+    
+    fetch("https://script.google.com/macros/s/AKfycbxGUjF-QspgtIrL_bjyX843FrkVYSGnp_uTDxtHPgIQmE6FtgRe-VrNywYAuG2KX0rz/exec", {
+      method: "POST",
+      body: data
+    })
+    .then(res => res.text())
+    .then(data => {
+      document.querySelector("#msg").innerHTML = data;
+      document.querySelector("#btn-subscribe").value = "Submit"
+    });
+  })
+
 });
