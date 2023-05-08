@@ -107,7 +107,9 @@
     font-size: 2.375rem; } }
 @media (max-width: 576px) {
   header .countdown-event ul li div {
-    font-size: 1.8rem; } }
+    font-size: 1.8rem; }
+    header .countdown-event ul li div::after {
+      right: -5px; } }
 
 @media (max-width: 992px) {
   .section-upcoming-events {
@@ -117,3 +119,4 @@
   footer .partners-logo {
     flex-direction: column;
     gap: 10px 0; } }
+
