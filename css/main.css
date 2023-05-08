@@ -52,7 +52,7 @@ header.hero-banner {
     content: "";
     background-color: #1B1B1B;
     width: 100%;
-    bottom: -57px;
+    top: 100%;
     left: 0;
     height: 57px; }
   header.hero-banner::after {
@@ -72,6 +72,8 @@ header .nav-logo {
   margin-top: 34px; }
   header .nav-logo img {
     max-width: 183px; }
+header .toggle-mobile-menu {
+  display: none; }
 header .nav-links ul {
   font-family: 'Eurostile-Regular';
   display: flex;
@@ -392,4 +394,3 @@ footer {
   background-repeat: no-repeat;
   font-size: 0; }
 
-/*# sourceMappingURL=main.css.map */

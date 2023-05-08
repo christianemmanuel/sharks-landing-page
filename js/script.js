@@ -32,6 +32,12 @@ $(document).ready(function () {
     ]
   });
 
+  if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+    $(".nav-links a").on("click", function(e){
+      $('.toggle-mobile-menu').trigger('click');
+      e.preventDefault();
+    });  
+  }
 
   $(".nav-links a").on("click", function(e){
     var href = $(this).attr("href");
@@ -84,5 +90,11 @@ $(document).ready(function () {
   $( window ).resize(function() {
     autoHeight;
   });
+
+  $('.toggle-mobile-menu').click(function(e) {
+    e.preventDefault();
+    $('body').toggleClass('active_menu');
+    $('.nav-links').slideToggle('fast');
+  })
 
 });

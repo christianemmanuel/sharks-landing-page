@@ -72,7 +72,7 @@ header {
       content: "";
       background-color: $black-color;
       width: 100%;
-      bottom: -57px;
+      top: 100%;
       left: 0;
       height: 57px;
     }
@@ -99,6 +99,9 @@ header {
     img {
       max-width: 183px;
     }
+  }
+  .toggle-mobile-menu {
+    display: none;
   }
   .nav-links {
     ul {
